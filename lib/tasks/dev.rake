@@ -1,7 +1,7 @@
 namespace :dev do
 
   DEFAULT_PASSWORD = 123456
-  
+
   desc "Configura o ambiente de desenvolvimento"
   task setup: :environment do
     if Rails.env.development?
@@ -31,7 +31,9 @@ namespace :dev do
       password: DEFAULT_PASSWORD,
       password_confirmation: DEFAULT_PASSWORD
     )
-  end  
+  end
+
+  private
 
   def show_spinner(msg_start, msg_end = "Concluído!")
     spinner = TTY::Spinner.new("[:spinner] #{msg_start}")
@@ -39,5 +41,4 @@ namespace :dev do
     yield
     spinner.success("(#{msg_end})")    
   end
-
 end
