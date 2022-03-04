@@ -69,3 +69,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'faker'
 gem 'kaminari'
 gem 'kaminari-i18n'
+gem 'cocoon'
